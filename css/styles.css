@@ -1,0 +1,129 @@
+/* Mahjong Font */
+@font-face {
+  font-family: 'MahjongFont';
+  src: url('../Resources/MahjongPlain-aa59.ttf') format('truetype');
+}
+
+/* Basic responsive styles for the static webapp */
+:root{
+  --bg: #f7f7f8;
+  --accent: #0366d6;
+  --text: #111;
+  --muted: #666;
+  --btn-text: #fff;
+}
+
+html, body { 
+  height: 100%; 
+}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  transition: background 240ms ease, color 240ms ease;
+  overflow: scroll;
+}
+
+/* Header and theme toggle positioning */
+header {
+  padding: 5rem 1rem 0.5rem;
+}
+
+.theme-toggle {
+  border: 0;
+  background: transparent;
+  font-size: 1.2rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.theme-toggle:focus {
+  outline: 3px solid #ffd54f;
+  outline-offset: 3px
+}
+
+main {
+  flex: .5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem
+}
+
+h1, h2 {
+  margin: 0.25rem 0
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem 0.5rem;
+  flex-wrap: wrap
+}
+
+.nav li {
+  margin: 0
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: 6px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn:focus{
+  outline:3px solid #ffd54f; 
+  outline-offset:3px 
+}
+
+.select-btn {
+  aspect-ratio: 1 / 1;
+  /* width: 50px; */
+  /* height: 50px; */
+  font-size: 2rem;
+  /* font-weight: bold; */
+  border: 2px solid var(--accent);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: var(--muted)
+}
+
+#activity-buttons > button.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: x-large;
+}
+
+@media (max-width:420px){
+  .nav{ flex-direction:column; align-items:stretch }
+  .btn{ width:100%; text-align:center }
+}
+
+/* Dark theme overrides */
+[data-theme="dark"]{
+  --bg: #0b0c0e;
+  --accent: #58a6ff;
+  --text: #e6eef8;
+  --muted: #9aa6b2;
+  --btn-text: #022c55;
+}
+
