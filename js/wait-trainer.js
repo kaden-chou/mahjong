@@ -230,7 +230,7 @@ function displayReview() {
     patternDiv.style.cssText = 'border: 1px solid var(--accent); padding: 1rem; border-radius: 4px; text-align: center;';
     patternDiv.innerHTML = `
       <p style="margin: 0 0 0.5rem 0; font-size: 0.9rem; color: var(--muted);">Pattern ${sessionPattern.index}</p>
-      <p style="margin: 0 0 0.5rem 0; font-size: 1.5rem; font-weight: bold; letter-spacing: 0.3rem; font-family: 'MahjongFont';">${displayPattern}</p>
+      <p style="margin: 0 0 0.5rem 0; font-size: 1.5rem; font-family: 'MahjongFont';">${displayPattern}</p>
       <div style="display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
         <span style="font-size: 1.2rem;">${sessionPattern.correct ? '✅' : '❌'}</span>
         <span style="font-size: 0.85rem; color: var(--muted);">Wait: ${waitNums}</span>
